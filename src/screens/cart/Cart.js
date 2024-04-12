@@ -47,8 +47,8 @@ console.log(productsInCart,"DFdff")
   async function displayRazorPay(e){
     e.preventDefault();
 
-    const key = 'rzp_test_J0sItnfQiwoMAy';
-    const secretKey = "MoUxizBul5pWywUeJpySYPbz"
+    const key = process.env.REACT_APP_RAZOR_PAY_ID;
+    const secretKey = process.env.REACT_APP_RAZOR_PAY_SECRET_KEY
     const priceInRs = subtotal * 83.33 * 100;
 
     const name = nameRef.current?.value;
